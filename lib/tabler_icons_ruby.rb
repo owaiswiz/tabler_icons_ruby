@@ -30,7 +30,9 @@ module TablerIconsRuby
       root.set_attribute(attribute_name, attribute_value)
     end
 
-    root.to_html
+    html = root.to_html
+    html = html.html_safe if html.respond_to?(:html_safe)
+    html
   end
 
   private
