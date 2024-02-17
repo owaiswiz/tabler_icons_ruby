@@ -9,6 +9,7 @@ module TablerIconsRuby
   class Error < StandardError; end
 
   def self.render(icon_name, size: nil, color: nil, class: nil, stroke_width: nil, **options)
+    icon_name = icon_name.to_s.tr('_', '-')
     root = nokogiri_doc(icon_name).root
 
     if size
@@ -36,10 +37,15 @@ module TablerIconsRuby
 
   def self.nokogiri_doc(icon_name)
     @icons_cache ||= {}
-    @icons_cache[icon_name] ||= Nokogiri::XML(File.read("icons/#{icon_name}.svg"))
+    @icons_cache[icon_name] ||= load_nokogiri_doc(icon_name)
     @icons_cache[icon_name].dup
   rescue
     raise Error.new("Could not find icon `#{icon_name}`.")
+  end
+
+  def self.load_nokogiri_doc(icon_name)
+    file_path = File.join(File.dirname(__FILE__), "../icons/#{icon_name}.svg")
+    Nokogiri::XML(File.read(file_path))
   end
 
   if defined?(Rails) && defined?(ActiveSupport)
