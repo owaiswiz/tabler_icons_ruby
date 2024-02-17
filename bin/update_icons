@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+`curl 'https://github.com/tabler/tabler-icons/archive/refs/heads/master.zip' -L --output tabler_icons.zip`
+`unzip -o tabler_icons.zip`
+`mkdir -p icons`
+`mv -f tabler-icons-master/icons/* icons/`
+`rm -rf tabler-icons-master`
+`rm tabler_icons.zip`
