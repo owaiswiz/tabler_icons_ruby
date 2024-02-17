@@ -23,7 +23,7 @@ module TablerIconsRuby
       root.set_attribute('class', classes)
     end
 
-    root.set_attribute('stroke', color) if color
+    root.set_attribute('color', color) if color
     root.set_attribute('stroke-width', stroke_width) if stroke_width
 
     options.each do |attribute_name, attribute_value|
