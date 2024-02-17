@@ -29,5 +29,5 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "nokogiri"
+  spec.add_dependency "nokogiri"
 end
