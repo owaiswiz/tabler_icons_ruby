@@ -17,6 +17,8 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
     $ gem install tabler_icons_ruby
 
+If you're not using Rails, remember to `require 'tabler_icons_ruby'`
+
 ## Usage
 
 If you're using this with Rails, you can simply use this helper in your views:
