@@ -54,3 +54,10 @@ rescue StandardError => e
   puts svg
   raise e
 end
+
+version = tag_name.gsub('v', '')
+
+# Replace the version in the gem (in lib/tabler_icons_ruby/version.rb)
+version_file = File.read('lib/tabler_icons_ruby/version.rb')
+new_version_file = version_file.gsub(/VERSION = ['"].*['"]/, "VERSION = \"#{version}\"")
+File.write('lib/tabler_icons_ruby/version.rb', new_version_file)
