@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-mood-share" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mood-share">
   <path d="M20.942 13.018a9 9 0 1 0 -8.942 7.982"></path>
   <path d="M9 10h.01"></path>
   <path d="M15 10h.01"></path>

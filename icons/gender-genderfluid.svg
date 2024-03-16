@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-gender-genderfluid" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-gender-genderfluid">
   <path d="M10 15.464a4 4 0 1 0 4 -6.928a4 4 0 0 0 -4 6.928z"></path>
   <path d="M15.464 14l3 -5.196"></path>
   <path d="M5.536 15.195l3 -5.196"></path>

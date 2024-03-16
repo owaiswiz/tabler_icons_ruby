@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-antenna-bars-4" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-antenna-bars-4">
   <path d="M6 18l0 -3"></path>
   <path d="M10 18l0 -6"></path>
   <path d="M14 18l0 -9"></path>

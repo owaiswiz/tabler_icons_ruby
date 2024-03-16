@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-clock-cog" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-clock-cog">
   <path d="M21 12a9 9 0 1 0 -9.002 9"></path>
   <path d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
   <path d="M19.001 15.5v1.5"></path>

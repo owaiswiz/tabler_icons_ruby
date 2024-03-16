@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-gymnastics" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-gymnastics">
   <path d="M7 7a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path>
   <path d="M13 21l1 -9l7 -6"></path>
   <path d="M3 11h6l5 1"></path>

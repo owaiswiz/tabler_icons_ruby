@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-mood-tongue-wink" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-mood-tongue-wink">
   <path d="M12 21a9 9 0 1 1 0 -18a9 9 0 0 1 0 18z"></path>
   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
   <path d="M9 10h.01"></path>

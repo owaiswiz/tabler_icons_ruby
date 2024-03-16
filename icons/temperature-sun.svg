@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-temperature-sun" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-temperature-sun">
   <path d="M4 13.5a4 4 0 1 0 4 0v-8.5a2 2 0 1 0 -4 0v8.5"></path>
   <path d="M4 9h4"></path>
   <path d="M13 16a4 4 0 1 0 0 -8a4.07 4.07 0 0 0 -1 .124"></path>

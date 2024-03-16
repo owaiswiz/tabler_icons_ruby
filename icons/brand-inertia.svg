@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-brand-inertia" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-inertia">
   <path d="M12.5 8l4 4l-4 4h4.5l4 -4l-4 -4z"></path>
   <path d="M3.5 8l4 4l-4 4h4.5l4 -4l-4 -4z"></path>
 </svg>

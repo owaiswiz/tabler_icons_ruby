@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-building-pavilion" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-building-pavilion">
   <path d="M3 21h7v-3a2 2 0 0 1 4 0v3h7"></path>
   <path d="M6 21l0 -9"></path>
   <path d="M18 21l0 -9"></path>

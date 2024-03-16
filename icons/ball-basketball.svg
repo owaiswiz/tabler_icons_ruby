@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-ball-basketball" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-ball-basketball">
   <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
   <path d="M5.65 5.65l12.7 12.7"></path>
   <path d="M5.65 18.35l12.7 -12.7"></path>

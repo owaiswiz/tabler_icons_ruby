@@ -14,18 +14,16 @@ download_url = response['assets'][0]['browser_download_url']
 `curl '#{download_url}' -L --output tmp/tabler_icons.zip`
 
 # Unzip it
-folder_name = `unzip -qql tmp/tabler_icons.zip | head -n1 | awk '{print $4}'`.chomp.chomp('/')
 `unzip -o tmp/tabler_icons.zip -d tmp`
 
 # Copy it over
 `
   mkdir -p icons;
-  mv -f tmp/#{folder_name}/icons/outline/* icons/;
-  cd tmp/#{folder_name}/icons/filled;
-  for f in *; do NEW=${f%.svg}-filled.svg; mv -f ${f} "../../../../icons/${NEW}"; done;
+  mv -f tmp/svg/outline/* icons/;
+  cd tmp/svg/filled;
+  for f in *; do NEW=${f%.svg}-filled.svg; mv -f ${f} "../../../icons/${NEW}"; done;
 `
 
-exit!
 # Cleanup
 `rm -rf tmp/*`
 
@@ -37,8 +35,12 @@ Dir['icons/**'].each do |icon|
   # Tabler adds this invisible box for design tools to work nicely. Don't need it when browser renders inline svg
   #  They removed this in 3.0.0
   invisible_box = noko.at_css("path[d='M0 0h24v24H0z']")
-  puts "Icon: #{icon} has invisible box" if invisible_box
-  invisible_box&.remove
+  if invisible_box
+    puts "Icon: #{icon} has invisible box"
+    invisible_box.remove
+  else
+    puts "Icon: #{icon} doesn't have invisible box"
+  end
 
   noko.root.remove_attribute('width') # We'll add it later if needed
   noko.root.remove_attribute('height') # We'll add it later if needed

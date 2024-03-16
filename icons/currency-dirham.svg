@@ -1,4 +1,4 @@
-<svg class="icon icon-tabler icon-tabler-currency-dirham" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-currency-dirham">
   <path d="M8.5 19h-3.5"></path>
   <path d="M8.599 16.479a1.5 1.5 0 1 0 -1.099 2.521"></path>
   <path d="M7 4v9"></path>
