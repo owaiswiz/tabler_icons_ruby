@@ -56,6 +56,17 @@ TablerIconsRuby.render(
 )
 ```
 
+<br/>
+
+## Interested in a powerful Rails UI library?
+
+I am working on a super-powerful Rails UI library - components as well as templates & patterns.
+
+[Please check this out if you're interested](https://owaiskhan.me/rails-ui-library).
+<br/>
+<br/>
+<br/>
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/owaiswiz/tabler_icons_ruby.
