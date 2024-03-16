@@ -8,22 +8,26 @@ require 'httparty'
 API_URL = 'https://api.github.com/repos/tabler/tabler-icons/releases/latest'
 response = HTTParty.get(API_URL)
 tag_name = response['tag_name']
-zipball_url = response['zipball_url']
+download_url = response['assets'][0]['browser_download_url']
 
 # Download the latest release
-`curl '#{zipball_url}' -L --output tabler_icons.zip`
+`curl '#{download_url}' -L --output tmp/tabler_icons.zip`
 
-`unzip -o tabler_icons.zip`
-`mkdir -p icons`
-`mv -f tabler-icons-main/icons/outline/* icons/`
+# Unzip it
+folder_name = `unzip -qql tmp/tabler_icons.zip | head -n1 | awk '{print $4}'`.chomp.chomp('/')
+`unzip -o tmp/tabler_icons.zip -d tmp`
+
+# Copy it over
 `
-  cd tabler-icons-main/icons/filled;
-  for f in *; do NEW=${f%.svg}-filled.svg; mv -f ${f} "../../../icons/${NEW}"; done
+  mkdir -p icons;
+  mv -f tmp/#{folder_name}/icons/outline/* icons/;
+  cd tmp/#{folder_name}/icons/filled;
+  for f in *; do NEW=${f%.svg}-filled.svg; mv -f ${f} "../../../../icons/${NEW}"; done;
 `
-`rm -rf tabler-icons-main`
-`rm tabler_icons.zip`
 
 exit!
+# Cleanup
+`rm -rf tmp/*`
 
 Dir['icons/**'].each do |icon|
   svg = File.read(icon)
