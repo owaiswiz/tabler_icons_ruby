@@ -1,24 +1,41 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-`curl 'https://github.com/tabler/tabler-icons/archive/refs/heads/master.zip' -L --output tabler_icons.zip`
+`curl 'https://github.com/tabler/tabler-icons/archive/refs/heads/main.zip' -L --output tabler_icons.zip`
 `unzip -o tabler_icons.zip`
 `mkdir -p icons`
-`mv -f tabler-icons-master/icons/* icons/`
-`rm -rf tabler-icons-master`
+`mv -f tabler-icons-main/icons/outline/* icons/`
+`
+  cd tabler-icons-main/icons/filled;
+  for f in *; do NEW=${f%.svg}-filled.svg; mv -f ${f} "../../../icons/${NEW}"; done
+`
+`rm -rf tabler-icons-main`
 `rm tabler_icons.zip`
 
-require "bundler/setup"
+exit!
+
+require 'bundler/setup'
 require 'nokogiri'
 Dir['icons/**'].each do |icon|
   svg = File.read(icon)
   noko = Nokogiri::XML(svg)
   noko.remove_namespaces! # Don't need xmlns="xxx" for inline svgs
-  noko.at_css("path[d='M0 0h24v24H0z']").remove # Tabler adds this invisible box for design tools to work nicely. Don't need it when browser renders inline svg
-  noko.root.remove_attribute("width") # We'll add it later if needed
-  noko.root.remove_attribute("height") # We'll add it later if needed
+
+  # Tabler adds this invisible box for design tools to work nicely. Don't need it when browser renders inline svg
+  #  They removed this in 3.0.0
+  invisible_box = noko.at_css("path[d='M0 0h24v24H0z']")
+  puts "Icon: #{icon} has invisible box" if invisible_box
+  invisible_box&.remove
+
+  noko.root.remove_attribute('width') # We'll add it later if needed
+  noko.root.remove_attribute('height') # We'll add it later if needed
 
   string = noko.to_xhtml
   string = string.gsub(/\n\s*\n/, "\n") # Removing the path above keeps the new line, remove it.
   File.write(icon, string)
+  puts "Successfully wrote icon: #{icon}"
+rescue StandardError => e
+  puts "Failed to write icon: #{icon}"
+  puts svg
+  raise e
 end
