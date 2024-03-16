@@ -1,7 +1,18 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-`curl 'https://github.com/tabler/tabler-icons/archive/refs/heads/main.zip' -L --output tabler_icons.zip`
+require 'bundler/setup'
+require 'nokogiri'
+require 'httparty'
+
+API_URL = 'https://api.github.com/repos/tabler/tabler-icons/releases/latest'
+response = HTTParty.get(API_URL)
+tag_name = response['tag_name']
+zipball_url = response['zipball_url']
+
+# Download the latest release
+`curl '#{zipball_url}' -L --output tabler_icons.zip`
+
 `unzip -o tabler_icons.zip`
 `mkdir -p icons`
 `mv -f tabler-icons-main/icons/outline/* icons/`
@@ -14,8 +25,6 @@
 
 exit!
 
-require 'bundler/setup'
-require 'nokogiri'
 Dir['icons/**'].each do |icon|
   svg = File.read(icon)
   noko = Nokogiri::XML(svg)
