@@ -1,17 +1,22 @@
 PATH
   remote: .
   specs:
-    tabler_icons_ruby (1.2.0)
+    tabler_icons_ruby (3.1.0)
       nokogiri
 
 GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     json (2.7.1)
     language_server-protocol (3.17.0.3)
     lint_roller (1.1.0)
+    mini_mime (1.1.5)
     minitest (5.22.2)
+    multi_xml (0.6.0)
     nokogiri (1.16.2-arm64-darwin)
       racc (~> 1.4)
     parallel (1.24.0)
@@ -58,6 +63,7 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  httparty
   minitest (~> 5.0)
   rake (~> 13.0)
   standard (~> 1.3)
