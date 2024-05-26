@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tabler_icons_ruby (1.2.0)
+    tabler_icons_ruby (3.1.0)
       nokogiri
 
 GEM
@@ -61,6 +61,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-22
+  arm64-darwin-23
 
 DEPENDENCIES
   httparty
