@@ -1,7 +1,7 @@
 # TablerIconsRuby
 <a href="https://badge.fury.io/rb/tabler_icons_ruby"><img src="https://badge.fury.io/rb/tabler_icons_ruby.svg" alt="Gem Version" height="18"></a> <img alt="Gem Total Downloads" src="https://img.shields.io/gem/dt/tabler_icons_ruby">
 
-* Use any icon from over [4950+ tabler icons.](https://tabler.io/icons)
+* Use any icon from over [5790+ tabler icons.](https://tabler.io/icons)
 * Works with/without Rails.
 * Easily customize things like size, colors, stroke width, classes & other HTML attributes.
 * Renders only icons you actually use as inline SVGs.
